@@ -173,7 +173,7 @@ void test_null_inputs( void ** _ )
     svg_mem_free( memh );
 }
 
-int main(int argc, char const* argv[])
+int main(void)
 {
     svg_set_alloc(talloc, tfree);
     const struct UnitTest tests[] = {

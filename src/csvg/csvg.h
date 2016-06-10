@@ -32,8 +32,8 @@
 typedef struct _svg svg_t;
 
 typedef struct _svg_elem svg_elem_t;
-typedef enum _asdf {
-    SVG_ELEM_PATH, ASDF
+typedef enum {
+    SVG_ELEM_PATH
 } svg_elem_type_t;
 
 typedef struct _svg_elem_attr svg_elem_attr_t;
@@ -44,6 +44,8 @@ typedef void * (*svg_malloc_t)(size_t size);
 typedef void (*svg_free_t)(void * ptr);
 
 typedef unsigned int svg_option_t;
+
+#define SVG_OPT_NONE 0x00000000
 
 /****************************************************/
 /*                  Structures                      */

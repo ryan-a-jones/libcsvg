@@ -186,8 +186,6 @@ svg_mem_t * svg_mem()
 
 void svg_mem_free( svg_mem_t * memh)
 {
-    REG_TYPE_FOR(svg_elem_t) * tmp_elem;
-    REG_TYPE_FOR(svg_elem_attr_t) * tmp_elem_attr;
     if(!memh) return;
 
     if(memh->svgh) freef(memh->svgh);
@@ -204,7 +202,11 @@ svg_t * svg_alloc(svg_mem_t * m)
     if(!m) return NULL;
     return m->svgh;
 }
-void svg_dealloc( svg_mem_t * _, svg_t * __) { return; }
+void svg_dealloc( svg_mem_t * _, svg_t * __)
+{
+    (void)_; (void)__;
+    return;
+}
 
 svg_elem_t * svg_elem_alloc( svg_mem_t * memh)
 {
@@ -279,7 +281,7 @@ static void * callocf( size_t nmemb, size_t size )
     void * alloc_region;
     size_t total_size = nmemb * size;
 
-    if( alloc_region = mallocf( total_size ) ){
+    if( (alloc_region = mallocf( total_size )) ){
         memset(alloc_region, 0, total_size);
     }
 

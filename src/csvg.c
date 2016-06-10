@@ -8,7 +8,7 @@
 
 svg_t *svg()
 {
-    svg_t * svgh;
+    svg_t * svgh = NULL;
     svg_mem_t * mem;
     int error_status = 0;
 
@@ -31,6 +31,7 @@ svg_t *svg()
 
     } while (0);
 
+    /*Check to see if an error occurred*/
     if(error_status < 0 && mem){
         svg_mem_free(mem);
         svgh = NULL;
@@ -41,17 +42,18 @@ svg_t *svg()
 
 svg_t * svg_from_file(const char * filename, const svg_option_t opt)
 {
+    (void) filename; (void) opt;
     return NULL;
 }
 
 void svg_incref(svg_t * svgh)
 {
-    svgh->ref++;
+    if(svgh) svgh->ref++;
 }
 
 void svg_decref(svg_t * svgh)
 {
-    if(--svgh->ref == 0){
+    if((svgh) && --svgh->ref == 0){
         svg_mem_free(svgh->mem);
     }
 }

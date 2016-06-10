@@ -17,8 +17,12 @@ test-driver
 .deps/
 *.log
 *.trs
+ltmain.sh
+libtool
+m4/
+.libs/
 
 #C
 *.o
-
-ltmain.sh
+*.la
+*.lo

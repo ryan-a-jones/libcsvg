@@ -8,10 +8,19 @@ LT_INIT
 AC_CONFIG_SRCDIR([src/csvg.c])
 AC_CONFIG_HEADERS([config.h])
 
+AC_CONFIG_MACRO_DIR([m4])
+
 # Checks for programs.
 AC_PROG_CC
 
 # Checks for libraries.
+PKG_CHECK_MODULES(
+    [XML2],
+    [libxml-2.0]
+)
+AC_SUBST([XML2_CFLAGS])
+AC_SUBST([XML2_LIBS])
+
 PKG_CHECK_MODULES(
     [CMOCKA],
     [cmocka],

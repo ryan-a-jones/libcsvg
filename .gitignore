@@ -19,7 +19,6 @@ test-driver
 *.trs
 ltmain.sh
 libtool
-m4/
 .libs/
 
 #C

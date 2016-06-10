@@ -21,3 +21,4 @@ test-driver
 #C
 *.o
 
+ltmain.sh

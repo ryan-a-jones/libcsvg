@@ -4,6 +4,7 @@
 AC_PREREQ([2.69])
 AC_INIT([csvg], [0.0.1], [ryan@rjones.io])
 AM_INIT_AUTOMAKE
+LT_INIT
 AC_CONFIG_SRCDIR([src/csvg.c])
 AC_CONFIG_HEADERS([config.h])
 

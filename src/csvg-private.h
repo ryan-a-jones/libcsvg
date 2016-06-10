@@ -33,6 +33,7 @@
 struct _svg{
     unsigned int ref;
     struct _svg_elem * root;
+    struct _svg_mem * mem;
 };
 
 struct _svg_elem{

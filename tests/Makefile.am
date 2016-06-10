@@ -1,9 +1,15 @@
-check_PROGRAMS = testcsvgmem
+check_PROGRAMS = testcsvgmem testcsvg
 TESTS = $(check_PROGRAMS)
 
-TESTLIBS = $(CMOCKA_LIBS)
-TESTCFLAGS = $(CMOCKA_CFLAGS) -I../src -I../../src -I../src/csvg -I../../src/csvg
+csvgsrcdir = $(srcdir)/../src
+
+TESTLIBS = $(CMOCKA_LIBS) $(XML2_LIBS)
+TESTCFLAGS = $(CMOCKA_CFLAGS) $(XML2_CFLAGS) -I$(csvgsrcdir) -I$(csvgsrcdir)/csvg
 
 testcsvgmem_SOURCES = test-csvg-mem.c
 testcsvgmem_LDFLAGS = $(TESTLIBS)
 testcsvgmem_CFLAGS = $(TESTCFLAGS)
+
+testcsvg_SOURCES = test-csvg.c $(csvgsrcdir)/csvg-mem.c
+testcsvg_LDFLAGS = $(TESTLIBS)
+testcsvg_CFLAGS = $(TESTCFLAGS)

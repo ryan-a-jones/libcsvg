@@ -157,6 +157,8 @@ svg_mem_t * svg_mem()
             error_status = -1;
             continue;
         }
+        /*Link memory element to self*/
+        memh->svgh->mem = memh;
 
         /*Allocate Element Region*/
         APPEND_NEW_MEM_REGION(memh->elems, svg_elem_t, 20);

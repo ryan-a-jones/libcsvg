@@ -1,6 +1,8 @@
 #ifndef _CSVG_H
 #define _CSVG_H
 
+#include <stdlib.h>
+
 /*
  *CSVG - SVG Parser
  *Copyright © 2016 Ryan Jones <ryan@rjones.io>

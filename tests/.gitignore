@@ -3,3 +3,4 @@ testcsvgmem
 testcsvg
 *.gcda
 *.gcno
+testcsvgparser

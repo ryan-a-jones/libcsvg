@@ -43,7 +43,7 @@ svg_t *svg()
 
 svg_t * svg_from_file(const char * filename, const svg_option_t opt)
 {
-    (void) opt;
+    (void) opt; (void) filename;
     int rc;
     svg_t * svgh = svg();
 
@@ -51,7 +51,7 @@ svg_t * svg_from_file(const char * filename, const svg_option_t opt)
     if(!svgh) return NULL;
 
     /*Pass file to parser*/
-    rc = csvg_parse_from_file(svgh, filename);
+    rc = 0;//csvg_parse_from_file(svgh, filename);
 
     /*Check return code for error*/
     if(rc > 0){

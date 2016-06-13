@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<svg width="150" height="250">
+    <desc xmlns:rmi="http://rmilaser.com/svg/v1">
+    </desc>
+    <rect x="10" y="10" width="100" height="200" rmi:power="200"/>
+</svg>

@@ -34,12 +34,13 @@ struct _svg{
     unsigned int ref;
     struct _svg_elem * root;
     struct _svg_mem * mem;
+    int error;
 };
 
 struct _svg_elem{
     unsigned int ref;
-    svg_elem_type_t * type;
-    struct _svg_elem * next, * prev, * children;
+    svg_elem_type_t type;
+    struct _svg_elem * next, * prev, * children, * parent;
 };
 
 #define SVG_ELEM_ATTR_KEY_LEN 40

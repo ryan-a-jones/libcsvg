@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/ryaxx/libcsvg.svg?branch=master)](https://travis-ci.org/ryaxx/libcsvg)
+
 Lib CSVG
 ====
 

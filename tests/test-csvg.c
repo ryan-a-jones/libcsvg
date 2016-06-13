@@ -63,10 +63,10 @@ void test_svg_null_input( void ** _ )
 int main(void)
 {
     svg_set_alloc(talloc, tfree);
-    const struct UnitTest tests[] = {
-        unit_test(test_svg_alloc),
-        unit_test(test_svg_null_input)
+    const struct CMUnitTest tests[] = {
+        cmocka_unit_test(test_svg_alloc),
+        cmocka_unit_test(test_svg_null_input)
     };
 
-    return run_group_tests(tests);
+    return cmocka_run_group_tests(tests,NULL,NULL);
 }

@@ -168,7 +168,6 @@ void test_null_inputs( void ** _ )
     svg_elem_attr_dealloc( memh, NULL );
     svg_elem_attr_dealloc( NULL, attr );
 
-
     svg_mem_free( NULL );
     svg_mem_free( memh );
 }
@@ -176,11 +175,11 @@ void test_null_inputs( void ** _ )
 int main(void)
 {
     svg_set_alloc(talloc, tfree);
-    const struct UnitTest tests[] = {
-        unit_test( test_null_inputs ),
-        unit_test( test_element_region ),
-        unit_test( test_element_attr_region )
+    const struct CMUnitTest tests[] = {
+        cmocka_unit_test( test_null_inputs ),
+        cmocka_unit_test( test_element_region ),
+        cmocka_unit_test( test_element_attr_region )
     };
 
-    return run_group_tests(tests);
+    return cmocka_run_group_tests(tests, NULL, NULL);
 }

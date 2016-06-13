@@ -23,7 +23,7 @@ AC_SUBST([XML2_LIBS])
 
 PKG_CHECK_MODULES(
     [CMOCKA],
-    [cmocka],
+    [cmocka >= 1],
     AC_MSG_RESULT([Tests available by running 'make check']),
     AC_MSG_WARN([Cmocka not found - Cannot run tests.])
 )

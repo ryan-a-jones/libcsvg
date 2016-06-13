@@ -9,4 +9,5 @@ before_install:
     - cd cmocka-1.0.1/build
     - cmake ..
     - make && sudo make install
+    - cd ../../
 script: autoreconf -i && ./configure && make && make check

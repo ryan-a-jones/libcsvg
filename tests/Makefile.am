@@ -4,7 +4,7 @@ TESTS = $(check_PROGRAMS)
 csvgsrcdir = $(srcdir)/../src
 
 TESTLIBS = $(CMOCKA_LIBS) $(XML2_LIBS)
-TESTCFLAGS = -v -Wall -Werror -Wextra $(CMOCKA_CFLAGS) $(XML2_CFLAGS) -I$(csvgsrcdir) -I$(csvgsrcdir)/csvg  \
+TESTCFLAGS = -Wall -Werror -Wextra $(CMOCKA_CFLAGS) $(XML2_CFLAGS) -I$(csvgsrcdir) -I$(csvgsrcdir)/csvg  \
 	-ftest-coverage -fprofile-arcs
 
 testcsvgmem_SOURCES = test-csvg-mem.c

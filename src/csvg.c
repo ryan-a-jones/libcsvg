@@ -1,6 +1,7 @@
 #include "csvg.h"
 #include "csvg-private.h"
 #include "csvg-mem.h"
+#include "csvg-parser.h"
 
 /********************************************/
 /*      Public Interface Functions          */
@@ -42,8 +43,23 @@ svg_t *svg()
 
 svg_t * svg_from_file(const char * filename, const svg_option_t opt)
 {
-    (void) filename; (void) opt;
-    return NULL;
+    (void) opt;
+    int rc;
+    svg_t * svgh = svg();
+
+    /*Check that allocation was successful*/
+    if(!svgh) return NULL;
+
+    /*Pass file to parser*/
+    rc = csvg_parse_from_file(svgh, filename);
+
+    /*Check return code for error*/
+    if(rc > 0){
+        svg_decref(svgh);
+        svgh = NULL;
+    }
+
+    return svgh;
 }
 
 void svg_incref(svg_t * svgh)

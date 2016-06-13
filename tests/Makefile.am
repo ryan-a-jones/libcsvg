@@ -1,4 +1,4 @@
-check_PROGRAMS = testcsvgmem testcsvg
+check_PROGRAMS = testcsvgmem testcsvg testcsvgparser
 TESTS = $(check_PROGRAMS)
 
 csvgsrcdir = $(srcdir)/../src
@@ -11,6 +11,10 @@ testcsvgmem_SOURCES = test-csvg-mem.c
 testcsvgmem_LDFLAGS = $(TESTLIBS)
 testcsvgmem_CFLAGS = $(TESTCFLAGS)
 
-testcsvg_SOURCES = test-csvg.c $(csvgsrcdir)/csvg-mem.c
+testcsvg_SOURCES = test-csvg.c $(csvgsrcdir)/csvg-mem.c $(csvgsrcdir)/csvg-parser.c
 testcsvg_LDFLAGS = $(TESTLIBS)
 testcsvg_CFLAGS = $(TESTCFLAGS)
+
+testcsvgparser_SOURCES = test-parser.c $(csvgsrcdir)/csvg-mem.c
+testcsvgparser_LDFLAGS = $(TESTLIBS)
+testcsvgparser_CFLAGS = $(TESTCFLAGS)

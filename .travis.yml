@@ -11,3 +11,6 @@ before_install:
     - make && sudo make install
     - cd ../../
 script: autoreconf -i && ./configure && make && make check
+
+after_failure:
+    - cat tests/test-suite.log

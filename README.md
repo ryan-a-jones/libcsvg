@@ -32,16 +32,9 @@ If you would like to help out, see `CONTRIBUTING.md`.
 ##Installing##
 Dependencies are:
 
-* Autotools (since there is not a LibCSVG release yet)
-* libxml2
-* cmocka (only required to run tests)
-
-On Debian/Ubuntu you should be able to satisfy these dependencies
-by running
-
-```
-sudo apt-get install autotools-dev libxml2-dev libcmocka-dev
-```
+* Autotools >= 2.68 (since there is not a LibCSVG release yet)
+* libxml2 >= 2.9.1
+* cmocka >= 1.0.0 (only required to run tests)
 
 To install, run:
 

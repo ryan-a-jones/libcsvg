@@ -16,7 +16,7 @@ AC_PROG_CC
 # Checks for libraries.
 PKG_CHECK_MODULES(
     [XML2],
-    [libxml-2.0]
+    [libxml-2.0 >= 2.9.1]
 )
 AC_SUBST([XML2_CFLAGS])
 AC_SUBST([XML2_LIBS])

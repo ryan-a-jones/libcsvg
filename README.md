@@ -5,7 +5,7 @@ Lib CSVG
 
 _SVG Parser, Manipulator, and Writer written in `C`_
 
-##Why Another SVG Parser?##
+## Why Another SVG Parser?
 
 This library was written in response to frustrations
 with other SVG Libraries (namely `librsvg`).
@@ -25,11 +25,12 @@ The main goals of this library are to provide:
     including `X11` utilities which can be prohibitive to many
     systems (server-side, embedded, etc.).
 
-##Status##
+## Status
+
 LibCSVG is currently in alpha and is nowhere near full functionality.
 If you would like to help out, see `CONTRIBUTING.md`.
 
-##Installing##
+## Installing
 Dependencies are:
 
 * Autotools (since there is not a LibCSVG release yet)
